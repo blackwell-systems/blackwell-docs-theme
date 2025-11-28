@@ -1,9 +1,14 @@
 /**
- * Blackwell Systems - Docsify Plugin & Config Helpers
+ * Blackwell Systems™ - Docsify Plugin & Config Helpers
  *
- * Usage: Include this after docsify.min.js in your index.html:
- *   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
- *   <script src="https://blackwell-systems.github.io/blackwell-docs-theme/blackwell.js"></script>
+ * Copyright (c) 2025 Dayna Blackwell. All Rights Reserved.
+ *
+ * PROPRIETARY AND CONFIDENTIAL
+ * This file is part of the Blackwell Systems brand assets.
+ * Unauthorized copying, modification, distribution, or use is strictly prohibited.
+ * See LICENSE for terms.
+ *
+ * Blackwell Systems™ is a trademark of Dayna Blackwell.
  */
 
 (function () {
