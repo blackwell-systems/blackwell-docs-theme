@@ -19,7 +19,7 @@ curl -fsSL https://example.com/install.sh | bash
 - Feature or benefit three
 - Feature or benefit four
 
-[Get Started](#quick-start)
+[Getting Started](#getting-started)
 [View on GitHub](https://github.com/blackwell-systems/PROJECT_NAME)
 
 <!-- Dark background to match branding -->
