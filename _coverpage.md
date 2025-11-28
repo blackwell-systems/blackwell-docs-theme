@@ -9,7 +9,7 @@
 - CSS variables for easy customization
 - Optional JavaScript helpers and plugins
 
-[View Templates](#templates)
-[GitHub](https://github.com/blackwell-systems/blackwell-docs-theme)
+[Getting Started](#getting-started)
+[View on GitHub](https://github.com/blackwell-systems/blackwell-docs-theme)
 
 ![color](#1a1a1a)
