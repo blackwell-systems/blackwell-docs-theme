@@ -9,7 +9,7 @@
 >
 > Copyright (c) 2025 Dayna Blackwell. All Rights Reserved.
 > Unauthorized use, copying, or distribution is strictly prohibited.
-> See [LICENSE](LICENSE) and [BRAND.md](BRAND.md) for terms.
+> See [LICENSE](LICENSE.md) and [BRAND.md](BRAND.md) for terms.
 
 ## Quick Start
 
