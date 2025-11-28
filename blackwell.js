@@ -28,7 +28,7 @@
    */
   var defaults = {
     // Use shared logo
-    logo: THEME_BASE + '/logo.svg',
+    logo: THEME_BASE + '/logo.png',
 
     // Enable coverpage
     coverpage: true,

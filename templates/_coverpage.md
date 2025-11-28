@@ -1,7 +1,7 @@
 <!-- _coverpage.md -->
 <!-- Copy this file to your docs folder and customize the placeholders -->
 
-![logo](https://blackwell-systems.github.io/blackwell-docs-theme/logo.svg ':size=180')
+![logo](https://blackwell-systems.github.io/blackwell-docs-theme/logo.png ':size=180')
 
 # PROJECT_NAME
 

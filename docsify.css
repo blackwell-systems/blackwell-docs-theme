@@ -16,13 +16,17 @@
    ========================================================================== */
 
 :root {
-  --blackwell-bg-dark: #1a1a1a;
-  --blackwell-bg-gradient-start: #444;
-  --blackwell-bg-gradient-end: #000;
+  --blackwell-bg-dark: #0d0d0d;
+  --blackwell-bg-mid: #1a1a1a;
+  --blackwell-bg-light: #0f0f0f;
   --blackwell-text-primary: #ffffff;
-  --blackwell-text-muted: rgba(255, 255, 255, 0.85);
-  --blackwell-accent: #ffffff;
-  --blackwell-border-muted: rgba(255, 255, 255, 0.5);
+  --blackwell-text-muted: #ccc;
+  --blackwell-text-dim: #999;
+  --blackwell-accent: #4a9eff;
+  --blackwell-accent-dark: #2d7dd2;
+  --blackwell-border-subtle: rgba(255, 255, 255, 0.08);
+  --blackwell-border-muted: rgba(255, 255, 255, 0.15);
+  --blackwell-font-mono: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', 'Droid Sans Mono', monospace;
 }
 
 /* ==========================================================================
@@ -31,15 +35,13 @@
 
 /* Cover background */
 section.cover {
-  background: var(--blackwell-bg-dark);
-  background: radial-gradient(circle at top left, var(--blackwell-bg-gradient-start) 0, var(--blackwell-bg-gradient-end) 55%);
+  background: linear-gradient(to bottom, var(--blackwell-bg-dark) 0%, var(--blackwell-bg-mid) 50%, var(--blackwell-bg-light) 100%);
   color: var(--blackwell-text-primary);
 }
 
 /* Override docsify's default cover background-image */
 section.cover.show {
-  background: var(--blackwell-bg-dark) !important;
-  background: radial-gradient(circle at top left, var(--blackwell-bg-gradient-start) 0, var(--blackwell-bg-gradient-end) 55%) !important;
+  background: linear-gradient(to bottom, var(--blackwell-bg-dark) 0%, var(--blackwell-bg-mid) 50%, var(--blackwell-bg-light) 100%) !important;
 }
 
 /* Logo styling */
@@ -52,7 +54,7 @@ section.cover .cover-main > p:first-child img {
 section.cover h1 {
   font-size: 2.8rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--blackwell-text-primary);
   margin: 0.5rem 0;
@@ -90,15 +92,16 @@ section.cover ul li {
 }
 
 section.cover ul li::before {
-  content: "•";
+  content: "→";
   position: absolute;
   left: 0;
-  color: var(--blackwell-text-muted);
+  color: var(--blackwell-accent);
 }
 
 /* Code blocks on cover */
 section.cover pre {
   background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--blackwell-border-subtle);
   border-radius: 6px;
   padding: 1rem;
   text-align: left;
@@ -108,6 +111,7 @@ section.cover pre {
 
 section.cover code {
   color: var(--blackwell-text-primary);
+  font-family: var(--blackwell-font-mono);
   font-size: 0.9rem;
 }
 
@@ -130,19 +134,20 @@ section.cover .cover-main > p:last-child a:first-child {
 }
 
 section.cover .cover-main > p:last-child a:first-child:hover {
-  background-color: transparent;
-  color: var(--blackwell-accent) !important;
+  background-color: var(--blackwell-accent-dark);
+  border-color: var(--blackwell-accent-dark);
 }
 
 /* Secondary button (second link) */
 section.cover .cover-main > p:last-child a:last-child {
   background-color: transparent;
   border: 2px solid var(--blackwell-border-muted);
-  color: var(--blackwell-text-primary) !important;
+  color: var(--blackwell-text-muted) !important;
 }
 
 section.cover .cover-main > p:last-child a:last-child:hover {
   border-color: var(--blackwell-accent);
+  color: var(--blackwell-accent) !important;
 }
 
 /* ==========================================================================
@@ -180,12 +185,12 @@ section.cover .cover-main > p:last-child a:last-child:hover {
 }
 
 .sidebar ul li a:hover {
-  color: #000;
+  color: var(--blackwell-accent);
 }
 
 /* Active sidebar link */
 .sidebar ul li.active > a {
-  color: #000;
+  color: var(--blackwell-accent);
   font-weight: 600;
 }
 
@@ -229,16 +234,18 @@ section.cover .cover-main > p:last-child a:last-child:hover {
   border-radius: 3px;
   padding: 0.15rem 0.4rem;
   font-size: 0.9em;
+  font-family: var(--blackwell-font-mono);
 }
 
 .markdown-section pre > code {
   background-color: transparent;
   padding: 0;
+  font-family: var(--blackwell-font-mono);
 }
 
 /* Blockquotes */
 .markdown-section blockquote {
-  border-left: 4px solid #1a1a1a;
+  border-left: 4px solid var(--blackwell-accent);
   padding-left: 1rem;
   color: #555;
 }
