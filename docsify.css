@@ -1,0 +1,281 @@
+/**
+ * Blackwell Systems - Shared Docsify Theme
+ *
+ * Usage: Include this after the base docsify theme in your index.html:
+ *   <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css" />
+ *   <link rel="stylesheet" href="https://blackwell-systems.github.io/blackwell-docs-theme/docsify.css" />
+ */
+
+/* ==========================================================================
+   CSS Variables - Brand Colors
+   ========================================================================== */
+
+:root {
+  --blackwell-bg-dark: #1a1a1a;
+  --blackwell-bg-gradient-start: #444;
+  --blackwell-bg-gradient-end: #000;
+  --blackwell-text-primary: #ffffff;
+  --blackwell-text-muted: rgba(255, 255, 255, 0.85);
+  --blackwell-accent: #ffffff;
+  --blackwell-border-muted: rgba(255, 255, 255, 0.5);
+}
+
+/* ==========================================================================
+   Coverpage Styles
+   ========================================================================== */
+
+/* Cover background */
+section.cover {
+  background: var(--blackwell-bg-dark);
+  background: radial-gradient(circle at top left, var(--blackwell-bg-gradient-start) 0, var(--blackwell-bg-gradient-end) 55%);
+  color: var(--blackwell-text-primary);
+}
+
+/* Override docsify's default cover background-image */
+section.cover.show {
+  background: var(--blackwell-bg-dark) !important;
+  background: radial-gradient(circle at top left, var(--blackwell-bg-gradient-start) 0, var(--blackwell-bg-gradient-end) 55%) !important;
+}
+
+/* Logo styling */
+section.cover .cover-main > p:first-child img {
+  max-width: 180px;
+  margin-bottom: 1.5rem;
+}
+
+/* Title styling */
+section.cover h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blackwell-text-primary);
+  margin: 0.5rem 0;
+}
+
+/* Tagline (blockquote) */
+section.cover blockquote {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--blackwell-text-muted);
+  border: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+section.cover blockquote p {
+  margin: 0;
+}
+
+/* Feature list */
+section.cover ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  max-width: 500px;
+  text-align: left;
+  display: inline-block;
+}
+
+section.cover ul li {
+  padding: 0.4rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--blackwell-text-muted);
+}
+
+section.cover ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--blackwell-text-muted);
+}
+
+/* Code blocks on cover */
+section.cover pre {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: left;
+  max-width: 600px;
+  margin: 1.5rem auto;
+}
+
+section.cover code {
+  color: var(--blackwell-text-primary);
+  font-size: 0.9rem;
+}
+
+/* Cover buttons */
+section.cover .cover-main > p:last-child a {
+  border-radius: 999px;
+  padding: 0.6rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0.3rem;
+  transition: all 0.2s ease;
+}
+
+/* Primary button (first link) */
+section.cover .cover-main > p:last-child a:first-child {
+  background-color: var(--blackwell-accent);
+  color: #000000 !important;
+  border: 2px solid var(--blackwell-accent);
+}
+
+section.cover .cover-main > p:last-child a:first-child:hover {
+  background-color: transparent;
+  color: var(--blackwell-accent) !important;
+}
+
+/* Secondary button (second link) */
+section.cover .cover-main > p:last-child a:last-child {
+  background-color: transparent;
+  border: 2px solid var(--blackwell-border-muted);
+  color: var(--blackwell-text-primary) !important;
+}
+
+section.cover .cover-main > p:last-child a:last-child:hover {
+  border-color: var(--blackwell-accent);
+}
+
+/* ==========================================================================
+   Sidebar Styles
+   ========================================================================== */
+
+/* Sidebar background */
+.sidebar {
+  background-color: #fafafa;
+  border-right: 1px solid #eee;
+}
+
+/* Sidebar logo/name */
+.sidebar .app-name {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Sidebar section headers (bold items) */
+.sidebar ul li strong {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #333;
+  margin-top: 1rem;
+  display: block;
+}
+
+/* Sidebar links */
+.sidebar ul li a {
+  color: #555;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+  color: #000;
+}
+
+/* Active sidebar link */
+.sidebar ul li.active > a {
+  color: #000;
+  font-weight: 600;
+}
+
+/* External link icons in sidebar */
+.sidebar ul li a img {
+  vertical-align: middle;
+  margin-right: 0.3rem;
+  opacity: 0.7;
+}
+
+/* ==========================================================================
+   Content Area Styles
+   ========================================================================== */
+
+/* Main content area */
+.markdown-section {
+  max-width: 800px;
+}
+
+/* Headings */
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Code blocks */
+.markdown-section pre {
+  background-color: #1a1a1a;
+  border-radius: 6px;
+}
+
+.markdown-section pre > code {
+  color: #e6e6e6;
+}
+
+/* Inline code */
+.markdown-section code {
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  padding: 0.15rem 0.4rem;
+  font-size: 0.9em;
+}
+
+.markdown-section pre > code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Blockquotes */
+.markdown-section blockquote {
+  border-left: 4px solid #1a1a1a;
+  padding-left: 1rem;
+  color: #555;
+}
+
+/* Tables */
+.markdown-section table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.markdown-section table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+  text-align: left;
+}
+
+.markdown-section table th,
+.markdown-section table td {
+  border: 1px solid #ddd;
+  padding: 0.6rem 0.8rem;
+}
+
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+  section.cover h1 {
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+  }
+
+  section.cover blockquote {
+    font-size: 1rem;
+  }
+
+  section.cover ul {
+    padding: 0 1rem;
+  }
+
+  section.cover pre {
+    margin: 1rem;
+    font-size: 0.85rem;
+  }
+}

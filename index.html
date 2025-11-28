@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blackwell Docs Theme</title>
+    <meta name="description" content="Shared Docsify theme for Blackwell Systems" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" />
+
+    <!-- Base docsify theme -->
+    <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css" />
+
+    <!-- Our custom branding (local for preview) -->
+    <link rel="stylesheet" href="docsify.css" />
+  </head>
+  <body>
+    <div id="app">Loading...</div>
+
+    <script>
+      window.$docsify = {
+        name: 'Blackwell Docs Theme',
+        repo: 'https://github.com/blackwell-systems/blackwell-docs-theme',
+        logo: 'logo.svg',
+        coverpage: true,
+        loadSidebar: false,
+        subMaxLevel: 2,
+        themeColor: '#ffffff',
+        auto2top: true
+      };
+    </script>
+
+    <!-- Docsify core -->
+    <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+
+    <!-- Our plugin -->
+    <script src="blackwell.js"></script>
+  </body>
+</html>
