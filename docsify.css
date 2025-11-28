@@ -33,15 +33,23 @@
    Coverpage Styles
    ========================================================================== */
 
-/* Cover background */
+/* Cover background - diagonal gradient */
 section.cover {
-  background: linear-gradient(to bottom, var(--blackwell-bg-dark) 0%, var(--blackwell-bg-mid) 50%, var(--blackwell-bg-light) 100%);
+  background: linear-gradient(to bottom right, var(--blackwell-bg-dark) 0%, var(--blackwell-bg-mid) 50%, var(--blackwell-bg-light) 100%);
   color: var(--blackwell-text-primary);
 }
 
 /* Override docsify's default cover background-image */
 section.cover.show {
-  background: linear-gradient(to bottom, var(--blackwell-bg-dark) 0%, var(--blackwell-bg-mid) 50%, var(--blackwell-bg-light) 100%) !important;
+  background: linear-gradient(to bottom right, var(--blackwell-bg-dark) 0%, var(--blackwell-bg-mid) 50%, var(--blackwell-bg-light) 100%) !important;
+}
+
+/* Cover content - left aligned */
+section.cover .cover-main {
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 /* Logo styling */
@@ -79,9 +87,7 @@ section.cover ul {
   list-style: none;
   padding: 0;
   margin: 1.5rem 0;
-  max-width: 500px;
   text-align: left;
-  display: inline-block;
 }
 
 section.cover ul li {
@@ -106,13 +112,18 @@ section.cover pre {
   padding: 1rem;
   text-align: left;
   max-width: 600px;
-  margin: 1.5rem auto;
+  margin: 1.5rem 0;
 }
 
 section.cover code {
   color: var(--blackwell-text-primary);
   font-family: var(--blackwell-font-mono);
   font-size: 0.9rem;
+}
+
+/* Cover buttons container */
+section.cover .cover-main > p:last-child {
+  text-align: left;
 }
 
 /* Cover buttons */
@@ -122,7 +133,7 @@ section.cover .cover-main > p:last-child a {
   font-size: 0.95rem;
   font-weight: 500;
   text-decoration: none;
-  margin: 0.3rem;
+  margin: 0.3rem 0.5rem 0.3rem 0;
   transition: all 0.2s ease;
 }
 
