@@ -1,10 +1,15 @@
 # Blackwell Docs Theme
 
+![Proprietary](badge-proprietary.svg)
+![Blackwell Systems™](badge-trademark.svg)
+
 **Blackwell Systems™** shared Docsify theme and branding assets.
 
-> **Copyright (c) 2025 Dayna Blackwell. All Rights Reserved.**
+> **⚠️ PROPRIETARY — NOT OPEN SOURCE**
 >
-> This repository contains proprietary brand assets. See [LICENSE](LICENSE) and [BRAND.md](BRAND.md) for terms.
+> Copyright (c) 2025 Dayna Blackwell. All Rights Reserved.
+> Unauthorized use, copying, or distribution is strictly prohibited.
+> See [LICENSE](LICENSE) and [BRAND.md](BRAND.md) for terms.
 
 ## Quick Start
 
