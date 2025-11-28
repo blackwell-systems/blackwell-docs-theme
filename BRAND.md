@@ -31,7 +31,7 @@ You **may not** without prior written permission:
 
 ## All Rights Reserved
 
-All materials in this repository—including code, assets, and brand identity—are proprietary and confidential. See [LICENSE](LICENSE) for complete terms.
+All materials in this repository—including code, assets, and brand identity—are proprietary and confidential. See [LICENSE](LICENSE.md) for complete terms.
 
 ## Questions
 
