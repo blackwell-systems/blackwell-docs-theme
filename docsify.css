@@ -44,12 +44,22 @@ section.cover.show {
   background: linear-gradient(to bottom right, var(--blackwell-bg-dark) 0%, var(--blackwell-bg-mid) 50%, var(--blackwell-bg-light) 100%) !important;
 }
 
-/* Cover content - left aligned */
+/* Cover content - flush left */
 section.cover .cover-main {
   text-align: left;
   max-width: 700px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  margin: 0;
+  padding: 0 0 0 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Override docsify's default centering */
+section.cover {
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 0;
 }
 
 /* Logo styling */
@@ -284,6 +294,10 @@ section.cover .cover-main > p:last-child a:last-child:hover {
    ========================================================================== */
 
 @media screen and (max-width: 768px) {
+  section.cover .cover-main {
+    padding: 0 1.5rem;
+  }
+
   section.cover h1 {
     font-size: 2rem;
     letter-spacing: 0.05em;
@@ -294,11 +308,11 @@ section.cover .cover-main > p:last-child a:last-child:hover {
   }
 
   section.cover ul {
-    padding: 0 1rem;
+    padding: 0;
   }
 
   section.cover pre {
-    margin: 1rem;
+    margin: 1rem 0;
     font-size: 0.85rem;
   }
 }
