@@ -103,27 +103,9 @@ section.cover .cover-main > p:last-of-type a:hover {
   background: rgba(255,255,255,0.05);
 }
 
-/* First button - transparent outline */
+/* First button - more prominent */
 section.cover .cover-main > p:last-of-type a:first-child {
   border-color: rgba(255,255,255,0.3);
-  color: #fff;
-}
-
-/* Second button - blue with white text */
-section.cover .cover-main > p:last-of-type a:last-child {
-  background: var(--theme-color);
-  border-color: var(--theme-color);
-  color: #fff;
-}
-
-section.cover .cover-main > p:last-of-type a:last-child:hover {
-  background: var(--theme-color-dark);
-  border-color: var(--theme-color-dark);
-}
-
-/* GitHub corner - blue with white */
-.github-corner svg {
-  fill: var(--theme-color);
   color: #fff;
 }
 
