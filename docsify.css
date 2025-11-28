@@ -182,42 +182,6 @@ section.cover .cover-main > p:last-of-type a:first-child {
 }
 
 /* ==========================================================================
-   GitHub Corner (top-right triangle)
-   ========================================================================== */
-
-.github-corner {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 10;
-}
-
-.github-corner svg {
-  fill: rgba(255,255,255,0.1);
-  color: #0d0d0d;
-  width: 80px;
-  height: 80px;
-}
-
-.github-corner:hover svg {
-  fill: rgba(255,255,255,0.2);
-}
-
-.github-corner .octo-arm {
-  transform-origin: 130px 106px;
-}
-
-.github-corner:hover .octo-arm {
-  animation: octocat-wave 560ms ease-in-out;
-}
-
-@keyframes octocat-wave {
-  0%, 100% { transform: rotate(0); }
-  20%, 60% { transform: rotate(-25deg); }
-  40%, 80% { transform: rotate(10deg); }
-}
-
-/* ==========================================================================
    Sidebar Styles
    ========================================================================== */
 
