@@ -103,10 +103,26 @@ section.cover .cover-main > p:last-of-type a:hover {
   background: rgba(255,255,255,0.05);
 }
 
-/* First button - more prominent */
-section.cover .cover-main > p:last-of-type a:first-child {
+/* First button - transparent with white text */
+section.cover .cover-main > p:last-of-type a:first-child,
+section.cover .cover-main > p:last-child a:first-child {
   border-color: rgba(255,255,255,0.3);
   color: #fff;
+  background: transparent;
+}
+
+/* Second button - theme color background (matches docsify default) */
+section.cover .cover-main > p:last-of-type a:last-child,
+section.cover .cover-main > p:last-child a:last-child {
+  background-color: var(--theme-color, #4a9eff) !important;
+  border-color: var(--theme-color, #4a9eff) !important;
+  color: #fff !important;
+}
+
+section.cover .cover-main > p:last-of-type a:last-child:hover,
+section.cover .cover-main > p:last-child a:last-child:hover {
+  background-color: var(--theme-color-dark, #2d7dd2) !important;
+  border-color: var(--theme-color-dark, #2d7dd2) !important;
 }
 
 /* Mobile responsive */
