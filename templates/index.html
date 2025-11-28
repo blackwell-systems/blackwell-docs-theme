@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PROJECT_NAME - Blackwell Systems</title>
+    <meta name="description" content="PROJECT_DESCRIPTION" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://blackwell-systems.github.io/blackwell-docs-theme/favicon.ico" />
+
+    <!-- Base docsify theme -->
+    <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css" />
+
+    <!-- Shared Blackwell branding -->
+    <link rel="stylesheet" href="https://blackwell-systems.github.io/blackwell-docs-theme/docsify.css" />
+
+    <!-- Optional: Local overrides (uncomment to use) -->
+    <!-- <link rel="stylesheet" href="./_overrides.css" /> -->
+  </head>
+  <body>
+    <div id="app">Loading...</div>
+
+    <script>
+      window.$docsify = {
+        // Project-specific settings
+        name: 'PROJECT_NAME',
+        repo: 'https://github.com/blackwell-systems/PROJECT_NAME',
+
+        // Use shared logo
+        logo: 'https://blackwell-systems.github.io/blackwell-docs-theme/logo.svg',
+
+        // Enable coverpage
+        coverpage: true,
+
+        // Enable sidebar
+        loadSidebar: true,
+
+        // Show heading levels in sidebar
+        subMaxLevel: 2,
+
+        // Theme accent color
+        themeColor: '#ffffff',
+
+        // Auto-scroll to top on page change
+        auto2top: true,
+
+        // Search configuration (requires search plugin)
+        search: {
+          placeholder: 'Search docs...',
+          noData: 'No results found',
+          depth: 3
+        }
+      };
+    </script>
+
+    <!-- Docsify core -->
+    <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+
+    <!-- Optional plugins (uncomment to enable) -->
+    <!-- <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script> -->
+    <!-- <script src="//unpkg.com/docsify-copy-code"></script> -->
+    <!-- <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script> -->
+    <!-- <script src="//unpkg.com/prismjs/components/prism-python.min.js"></script> -->
+
+    <!-- Shared Blackwell plugin (optional helpers) -->
+    <script src="https://blackwell-systems.github.io/blackwell-docs-theme/blackwell.js"></script>
+  </body>
+</html>
