@@ -103,6 +103,7 @@ section.cover .cover-main > p:last-of-type a:hover {
   background: rgba(255,255,255,0.05);
 }
 
+/* First button - more prominent */
 section.cover .cover-main > p:last-of-type a:first-child {
   border-color: rgba(255,255,255,0.3);
   color: #fff;
