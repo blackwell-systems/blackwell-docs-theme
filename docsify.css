@@ -16,179 +16,190 @@
    ========================================================================== */
 
 :root {
-  --blackwell-bg-dark: #0d0d0d;
-  --blackwell-bg-mid: #1a1a1a;
-  --blackwell-bg-light: #0f0f0f;
-  --blackwell-text-primary: #ffffff;
-  --blackwell-text-muted: #ccc;
-  --blackwell-text-dim: #999;
-  --blackwell-accent: #4a9eff;
-  --blackwell-accent-dark: #2d7dd2;
-  --blackwell-border-subtle: rgba(255, 255, 255, 0.08);
-  --blackwell-border-muted: rgba(255, 255, 255, 0.15);
+  --theme-color: #4a9eff;
+  --theme-color-dark: #2d7dd2;
   --blackwell-font-mono: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', 'Droid Sans Mono', monospace;
 }
 
 /* ==========================================================================
-   Coverpage Styles
+   Coverpage Styles (matches pipeboard exactly)
    ========================================================================== */
 
-/* Cover background - diagonal gradient */
 section.cover {
-  background: linear-gradient(to bottom right, var(--blackwell-bg-dark) 0%, var(--blackwell-bg-mid) 50%, var(--blackwell-bg-light) 100%);
-  color: var(--blackwell-text-primary);
+  background: linear-gradient(to bottom right, #0d0d0d 0%, #1a1a1a 50%, #0f0f0f 100%) !important;
 }
 
-/* Override docsify's default cover background-image */
-section.cover.show {
-  background: linear-gradient(to bottom right, var(--blackwell-bg-dark) 0%, var(--blackwell-bg-mid) 50%, var(--blackwell-bg-light) 100%) !important;
-}
-
-/* Cover content - flush left */
 section.cover .cover-main {
-  text-align: left;
   max-width: 700px;
-  margin: 0;
-  padding: 0 0 0 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
-/* Override docsify's default centering */
-section.cover {
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 0;
-}
-
-/* Logo styling */
-section.cover .cover-main > p:first-child img {
-  max-width: 180px;
-  margin-bottom: 1.5rem;
-}
-
-/* Title styling */
 section.cover h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
+  font-weight: 300;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--blackwell-text-primary);
-  margin: 0.5rem 0;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
-/* Tagline (blockquote) */
 section.cover blockquote {
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: var(--blackwell-text-muted);
+  font-size: 1rem;
+  color: #888;
   border: none;
-  margin: 1rem 0;
-  padding: 0;
+  font-style: normal;
+  letter-spacing: 0.05em;
 }
 
-section.cover blockquote p {
-  margin: 0;
+section.cover pre {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
+  text-align: left;
+  max-width: 500px;
+  margin: 1.5rem auto;
 }
 
-/* Feature list */
 section.cover ul {
+  text-align: left;
+  display: inline-block;
   list-style: none;
   padding: 0;
-  margin: 1.5rem 0;
-  text-align: left;
+  margin: 2rem 0;
 }
 
 section.cover ul li {
+  color: #999;
+  font-size: 0.9rem;
   padding: 0.4rem 0;
-  padding-left: 1.5rem;
-  position: relative;
-  color: var(--blackwell-text-muted);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-family: var(--blackwell-font-mono);
+}
+
+section.cover ul li:last-child {
+  border-bottom: none;
 }
 
 section.cover ul li::before {
-  content: "→";
-  position: absolute;
-  left: 0;
-  color: var(--blackwell-accent);
+  content: "→ ";
+  color: #444;
+  margin-right: 0.5rem;
 }
 
-/* Code blocks on cover */
-section.cover pre {
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid var(--blackwell-border-subtle);
-  border-radius: 6px;
-  padding: 1rem;
-  text-align: left;
-  max-width: 600px;
-  margin: 1.5rem 0;
+/* Subdued buttons */
+section.cover .cover-main > p:last-of-type a {
+  border: 1px solid rgba(255,255,255,0.15);
+  background: transparent;
+  color: #ccc;
+  padding: 0.6rem 1.8rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border-radius: 2px;
 }
 
-section.cover code {
-  color: var(--blackwell-text-primary);
-  font-family: var(--blackwell-font-mono);
-  font-size: 0.9rem;
+section.cover .cover-main > p:last-of-type a:hover {
+  border-color: rgba(255,255,255,0.4);
+  color: #fff;
+  background: rgba(255,255,255,0.05);
 }
 
-/* Cover buttons container */
-section.cover .cover-main > p:last-child {
-  text-align: left;
+section.cover .cover-main > p:last-of-type a:first-child {
+  border-color: rgba(255,255,255,0.3);
+  color: #fff;
 }
 
-/* Cover buttons */
-section.cover .cover-main > p:last-child a {
-  border-radius: 999px;
-  padding: 0.6rem 1.6rem;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-decoration: none;
-  margin: 0.3rem 0.5rem 0.3rem 0;
-  transition: all 0.2s ease;
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+  section.cover {
+    padding: 0 1rem;
+  }
+
+  section.cover .cover-main {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  section.cover .cover-main > p:first-child img {
+    max-width: 100px !important;
+  }
+
+  section.cover h1 {
+    font-size: 1.6rem;
+    letter-spacing: 0.05em;
+  }
+
+  section.cover blockquote {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+
+  section.cover pre {
+    max-width: 100%;
+    font-size: 0.7rem;
+    padding: 0.8rem;
+    overflow-x: auto;
+    margin: 1rem auto;
+  }
+
+  section.cover ul {
+    margin: 1.5rem 0;
+    padding: 0 0.5rem;
+    max-width: 100%;
+  }
+
+  section.cover ul li {
+    font-size: 0.8rem;
+    padding: 0.35rem 0;
+  }
+
+  section.cover .cover-main > p:last-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  section.cover .cover-main > p:last-of-type a {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.75rem;
+    width: 80%;
+    text-align: center;
+  }
 }
 
-/* Primary button (first link) */
-section.cover .cover-main > p:last-child a:first-child {
-  background-color: var(--blackwell-accent);
-  color: #000000 !important;
-  border: 2px solid var(--blackwell-accent);
-}
+@media screen and (max-width: 480px) {
+  section.cover h1 {
+    font-size: 1.3rem;
+  }
 
-section.cover .cover-main > p:last-child a:first-child:hover {
-  background-color: var(--blackwell-accent-dark);
-  border-color: var(--blackwell-accent-dark);
-}
+  section.cover pre {
+    font-size: 0.6rem;
+  }
 
-/* Secondary button (second link) */
-section.cover .cover-main > p:last-child a:last-child {
-  background-color: transparent;
-  border: 2px solid var(--blackwell-border-muted);
-  color: var(--blackwell-text-muted) !important;
-}
-
-section.cover .cover-main > p:last-child a:last-child:hover {
-  border-color: var(--blackwell-accent);
-  color: var(--blackwell-accent) !important;
+  section.cover ul li {
+    font-size: 0.75rem;
+  }
 }
 
 /* ==========================================================================
    Sidebar Styles
    ========================================================================== */
 
-/* Sidebar background */
 .sidebar {
   background-color: #fafafa;
   border-right: 1px solid #eee;
 }
 
-/* Sidebar logo/name */
 .sidebar .app-name {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
-/* Sidebar section headers (bold items) */
+.app-name-link img {
+  width: 2rem;
+}
+
 .sidebar ul li strong {
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -198,7 +209,6 @@ section.cover .cover-main > p:last-child a:last-child:hover {
   display: block;
 }
 
-/* Sidebar links */
 .sidebar ul li a {
   color: #555;
   font-size: 0.9rem;
@@ -206,16 +216,14 @@ section.cover .cover-main > p:last-child a:last-child:hover {
 }
 
 .sidebar ul li a:hover {
-  color: var(--blackwell-accent);
+  color: var(--theme-color);
 }
 
-/* Active sidebar link */
 .sidebar ul li.active > a {
-  color: var(--blackwell-accent);
+  color: var(--theme-color);
   font-weight: 600;
 }
 
-/* External link icons in sidebar */
 .sidebar ul li a img {
   vertical-align: middle;
   margin-right: 0.3rem;
@@ -226,12 +234,10 @@ section.cover .cover-main > p:last-child a:last-child:hover {
    Content Area Styles
    ========================================================================== */
 
-/* Main content area */
 .markdown-section {
   max-width: 800px;
 }
 
-/* Headings */
 .markdown-section h1,
 .markdown-section h2,
 .markdown-section h3 {
@@ -239,7 +245,6 @@ section.cover .cover-main > p:last-child a:last-child:hover {
   letter-spacing: -0.01em;
 }
 
-/* Code blocks */
 .markdown-section pre {
   background-color: #1a1a1a;
   border-radius: 6px;
@@ -249,7 +254,6 @@ section.cover .cover-main > p:last-child a:last-child:hover {
   color: #e6e6e6;
 }
 
-/* Inline code */
 .markdown-section code {
   background-color: #f0f0f0;
   border-radius: 3px;
@@ -264,14 +268,12 @@ section.cover .cover-main > p:last-child a:last-child:hover {
   font-family: var(--blackwell-font-mono);
 }
 
-/* Blockquotes */
 .markdown-section blockquote {
-  border-left: 4px solid var(--blackwell-accent);
+  border-left: 4px solid var(--theme-color);
   padding-left: 1rem;
   color: #555;
 }
 
-/* Tables */
 .markdown-section table {
   border-collapse: collapse;
   width: 100%;
@@ -287,32 +289,4 @@ section.cover .cover-main > p:last-child a:last-child:hover {
 .markdown-section table td {
   border: 1px solid #ddd;
   padding: 0.6rem 0.8rem;
-}
-
-/* ==========================================================================
-   Responsive Adjustments
-   ========================================================================== */
-
-@media screen and (max-width: 768px) {
-  section.cover .cover-main {
-    padding: 0 1.5rem;
-  }
-
-  section.cover h1 {
-    font-size: 2rem;
-    letter-spacing: 0.05em;
-  }
-
-  section.cover blockquote {
-    font-size: 1rem;
-  }
-
-  section.cover ul {
-    padding: 0;
-  }
-
-  section.cover pre {
-    margin: 1rem 0;
-    font-size: 0.85rem;
-  }
 }
