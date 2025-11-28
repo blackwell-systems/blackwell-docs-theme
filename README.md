@@ -1,6 +1,10 @@
 # Blackwell Docs Theme
 
-Shared Docsify theme and branding assets for Blackwell Systems documentation.
+**Blackwell Systems™** shared Docsify theme and branding assets.
+
+> **Copyright (c) 2025 Dayna Blackwell. All Rights Reserved.**
+>
+> This repository contains proprietary brand assets. See [LICENSE](LICENSE) and [BRAND.md](BRAND.md) for terms.
 
 ## Quick Start
 
@@ -158,3 +162,22 @@ docsify serve .
 ```
 
 Then open `http://localhost:3000` to see the theme in action.
+
+## Legal
+
+### Proprietary License
+
+All materials in this repository are proprietary and confidential. Unauthorized copying, modification, distribution, or use is strictly prohibited.
+
+### Trademarks
+
+**Blackwell Systems™** and the Blackwell Systems logo are trademarks of Dayna Blackwell.
+
+### Brand Guidelines
+
+See [BRAND.md](BRAND.md) for complete brand usage guidelines and restrictions.
+
+---
+
+*Blackwell Systems™ is a trademark of Dayna Blackwell.*
+*Copyright (c) 2025 Dayna Blackwell. All Rights Reserved.*

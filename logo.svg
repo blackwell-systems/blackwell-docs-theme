@@ -1,6 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <!-- Blackwell Systems Logo Placeholder -->
-  <!-- Replace this with your actual logo -->
+  <!--
+    Blackwell Systems™ Logo
+    Copyright (c) 2025 Dayna Blackwell. All Rights Reserved.
+
+    PROPRIETARY AND CONFIDENTIAL
+    This logo is a trademark of Dayna Blackwell.
+    Unauthorized use, copying, modification, or distribution is strictly prohibited.
+    See LICENSE and BRAND.md for terms.
+  -->
 
   <!-- Background circle -->
   <circle cx="100" cy="100" r="90" fill="#1a1a1a"/>
