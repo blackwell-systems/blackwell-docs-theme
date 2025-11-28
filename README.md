@@ -54,7 +54,7 @@ If you just want the branding, add these lines to your existing `index.html`:
 
 <script>
   window.$docsify = {
-    logo: 'https://blackwell-systems.github.io/blackwell-docs-theme/logo.svg',
+    logo: 'https://blackwell-systems.github.io/blackwell-docs-theme/logo.png',
     // ... your other config
   };
 </script>
@@ -68,7 +68,7 @@ If you just want the branding, add these lines to your existing `index.html`:
 | File | Description |
 |------|-------------|
 | `docsify.css` | Complete theme styles (coverpage, sidebar, content) |
-| `logo.svg` | Blackwell Systems logo (180x180) |
+| `logo.png` | Blackwell Systems logo (180x180) |
 | `favicon.svg` | Browser tab icon |
 | `blackwell.js` | Optional Docsify plugin with helpers |
 
@@ -134,7 +134,7 @@ window.$docsify.plugins = [
 ```
 blackwell-docs-theme/
 ├── docsify.css          # Shared styles
-├── logo.svg             # Primary logo
+├── logo.png             # Primary logo
 ├── favicon.svg          # Browser icon
 ├── blackwell.js         # Optional plugin/helpers
 ├── README.md            # This file

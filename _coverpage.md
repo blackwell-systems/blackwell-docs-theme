@@ -1,4 +1,4 @@
-![logo](logo.svg ':size=180')
+![logo](logo.png ':size=180')
 
 # Blackwell Docs Theme
 
