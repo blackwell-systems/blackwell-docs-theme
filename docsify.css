@@ -9,6 +9,13 @@
  * See LICENSE for terms.
  *
  * Blackwell Systems™ is a trademark of Dayna Blackwell.
+ *
+ * USAGE (both stylesheets required, in this order):
+ *   1. vue.css     — Docsify's base theme (layout, sidebar, typography)
+ *   2. docsify.css — Blackwell branding (colors, coverpage, buttons)
+ *
+ *   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+ *   <link rel="stylesheet" href="https://blackwell-systems.github.io/blackwell-docs-theme/docsify.css" />
  */
 
 /* ==========================================================================

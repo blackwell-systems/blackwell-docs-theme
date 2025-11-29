@@ -42,6 +42,12 @@ Then customize the placeholders:
 
 If you just want the branding, add these lines to your existing `index.html`:
 
+> **Why two stylesheets?**
+> 1. `vue.css` — Docsify's base theme (layout, sidebar, typography)
+> 2. `docsify.css` — Blackwell branding (colors, coverpage, buttons)
+>
+> Load both in this order. The second overrides the first.
+
 ```html
 <head>
   <!-- Base docsify theme -->
