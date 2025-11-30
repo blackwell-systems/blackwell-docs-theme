@@ -273,7 +273,7 @@ section.cover pre {
   text-align: left;
   max-width: 500px;
   margin: 1.5rem auto;
-  padding: 0.8125rem 1.0625rem;
+  padding: 0.625rem 0.875rem;
   position: relative;
   transition: all 0.3s ease;
   cursor: pointer;
