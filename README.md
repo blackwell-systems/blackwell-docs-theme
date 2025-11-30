@@ -21,26 +21,26 @@ In this repo's settings, enable GitHub Pages from the `main` branch. This serves
 https://blackwell-systems.github.io/blackwell-docs-theme/
 ```
 
-### 2. Use in Your Project
+### 2. Using in Blackwell Systems Projects
 
-Copy the template files from `templates/` to your project's `docs/` folder:
+Copy the template files from `templates/` to the target project's `docs/` folder:
 
 ```bash
-# From your project root
+# From the project root directory
 cp path/to/blackwell-docs-theme/templates/index.html docs/
 cp path/to/blackwell-docs-theme/templates/_coverpage.md docs/
 cp path/to/blackwell-docs-theme/templates/_sidebar.md docs/
 ```
 
 Then customize the placeholders:
-- Replace `PROJECT_NAME` with your project name
+- Replace `PROJECT_NAME` with the project name
 - Replace `PROJECT_DESCRIPTION` with a short description
 - Update the feature bullets in `_coverpage.md`
 - Adjust sidebar links in `_sidebar.md`
 
 ### 3. Minimal Setup (index.html only)
 
-If you just want the branding, add these lines to your existing `index.html`:
+For projects that only need the branding, add these lines to the existing `index.html`:
 
 > **Why two stylesheets?**
 > 1. `vue.css` — Docsify's base theme (layout, sidebar, typography)
@@ -61,7 +61,7 @@ If you just want the branding, add these lines to your existing `index.html`:
 <script>
   window.$docsify = {
     logo: 'https://blackwell-systems.github.io/blackwell-docs-theme/logo.png',
-    // ... your other config
+    // ... project-specific config
   };
 </script>
 
@@ -90,17 +90,17 @@ If you just want the branding, add these lines to your existing `index.html`:
 
 ### Local Overrides
 
-Add project-specific styles without modifying the shared theme:
+Project-specific styles can be added without modifying the shared theme:
 
 ```html
-<!-- In your index.html -->
+<!-- In the project's index.html -->
 <link rel="stylesheet" href="https://blackwell-systems.github.io/blackwell-docs-theme/docsify.css" />
 <link rel="stylesheet" href="./_overrides.css" />
 ```
 
 ### CSS Variables
 
-The theme uses CSS custom properties you can override:
+The theme uses CSS custom properties that can be overridden in project-specific stylesheets:
 
 ```css
 :root {
@@ -116,17 +116,17 @@ The theme uses CSS custom properties you can override:
 
 ### Using blackwell.js Helpers
 
-The JavaScript file provides optional utilities:
+The JavaScript file provides optional utilities for Blackwell Systems projects:
 
 ```javascript
 // Use default config as a base
 window.$docsify = Object.assign({}, BlackwellTheme.defaults, {
-  name: 'My Project',
-  repo: 'https://github.com/blackwell-systems/my-project'
+  name: 'dotclaude',
+  repo: 'https://github.com/blackwell-systems/dotclaude'
 });
 
 // Generate GitHub links
-var links = BlackwellTheme.githubLinks('blackwell-systems', 'my-project');
+var links = BlackwellTheme.githubLinks('blackwell-systems', 'dotclaude');
 // links.repo, links.issues, links.releases
 
 // Enable "Edit on GitHub" links
@@ -152,13 +152,13 @@ blackwell-docs-theme/
 
 ## Updating the Brand
 
-When you update assets in this repo:
+When assets are updated in this repo:
 
 1. Commit and push to `main`
 2. GitHub Pages auto-deploys
-3. All projects using the shared URLs get updates automatically
+3. Blackwell Systems projects using the shared URLs receive updates automatically
 
-No need to update individual repositories.
+Individual project repositories do not need to be updated.
 
 ## Local Development
 

@@ -1,5 +1,5 @@
 /**
- * Blackwell Systems™ - Shared Docsify Theme
+ * Blackwell Systems™ - Shared Docsify Dark Theme
  *
  * Copyright (c) 2025 Dayna Blackwell. All Rights Reserved.
  *
@@ -10,27 +10,224 @@
  *
  * Blackwell Systems™ is a trademark of Dayna Blackwell.
  *
+ * Version: 1.0.0
+ *
  * USAGE (both stylesheets required, in this order):
  *   1. vue.css     — Docsify's base theme (layout, sidebar, typography)
- *   2. docsify.css — Blackwell branding (colors, coverpage, buttons)
+ *   2. docsify.css — Blackwell dark theme (colors, coverpage, buttons)
  *
  *   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
  *   <link rel="stylesheet" href="https://blackwell-systems.github.io/blackwell-docs-theme/docsify.css" />
  */
 
-/* ==========================================================================
-   CSS Variables - Brand Colors
-   ========================================================================== */
+/* ============================================================================
+   Dark Mode Base Styles
+   ============================================================================ */
 
-:root {
-  --theme-color: #4a9eff;
-  --theme-color-dark: #2d7dd2;
-  --blackwell-font-mono: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', 'Droid Sans Mono', monospace;
+body {
+  background: #0d0d0d !important;
+  color: #AEAEA1 !important;
 }
 
-/* ==========================================================================
-   Coverpage Styles (matches pipeboard exactly)
-   ========================================================================== */
+/* ============================================================================
+   Sidebar
+   ============================================================================ */
+
+.sidebar {
+  background: #1a1a1a !important;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.sidebar ul li a {
+  color: #999 !important;
+}
+
+.sidebar ul li a:hover {
+  color: #AEAEA1 !important;
+}
+
+.sidebar ul li.active > a {
+  color: var(--theme-color, #4a9eff) !important;
+  border-right: 2px solid var(--theme-color, #4a9eff);
+}
+
+.sidebar .search input {
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  color: #AEAEA1 !important;
+}
+
+.sidebar .search input::placeholder {
+  color: #666 !important;
+}
+
+/* Sidebar toggle (hamburger menu) */
+.sidebar-toggle {
+  background: transparent;
+  border: none;
+}
+
+.sidebar-toggle span {
+  background-color: var(--theme-color, #4a9eff) !important;
+}
+
+.sidebar-toggle:hover span {
+  background-color: #6bb3ff !important;
+}
+
+/* ============================================================================
+   Main Content
+   ============================================================================ */
+
+.content {
+  padding-top: 30px;
+}
+
+.markdown-section {
+  color: #AEAEA1 !important;
+  max-width: 900px;
+}
+
+/* Headings */
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3,
+.markdown-section h4,
+.markdown-section h5,
+.markdown-section h6 {
+  color: #fff !important;
+}
+
+.markdown-section h1 {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 0.5rem;
+}
+
+.markdown-section h2 {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding-bottom: 0.3rem;
+}
+
+/* Links */
+.markdown-section a {
+  color: var(--theme-color, #4a9eff) !important;
+}
+
+.markdown-section a:hover {
+  color: #6bb3ff !important;
+}
+
+/* Strong/Bold */
+.markdown-section strong {
+  color: #fff;
+}
+
+/* Blockquotes */
+.markdown-section blockquote {
+  background: rgba(255,255,255,0.03);
+  border-left: 4px solid var(--theme-color, #4a9eff);
+  color: #999;
+}
+
+/* Horizontal Rules */
+.markdown-section hr {
+  border-color: rgba(255,255,255,0.1);
+}
+
+/* ============================================================================
+   Code Blocks
+   ============================================================================ */
+
+.markdown-section pre,
+.markdown-section code {
+  background: rgba(255,255,255,0.05) !important;
+  color: #AEAEA1 !important;
+}
+
+.markdown-section pre {
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.markdown-section pre > code {
+  background: transparent !important;
+  color: #ccc !important;
+}
+
+.markdown-section code {
+  color: var(--theme-color, #4a9eff) !important;
+}
+
+/* Copy code button */
+.docsify-copy-code-button {
+  background: rgba(255,255,255,0.1) !important;
+  color: #AEAEA1 !important;
+}
+
+.docsify-copy-code-button:hover {
+  background: rgba(255,255,255,0.15) !important;
+}
+
+/* ============================================================================
+   Tables
+   ============================================================================ */
+
+.markdown-section table {
+  border-color: rgba(255,255,255,0.1);
+}
+
+.markdown-section table thead {
+  background: rgba(255,255,255,0.05);
+}
+
+.markdown-section table th,
+.markdown-section table td {
+  border-color: rgba(255,255,255,0.1);
+  color: #AEAEA1;
+}
+
+.markdown-section table tr:nth-child(even) {
+  background: rgba(255,255,255,0.02);
+}
+
+/* ============================================================================
+   Lists
+   ============================================================================ */
+
+.markdown-section ul,
+.markdown-section ol {
+  color: #AEAEA1;
+}
+
+/* ============================================================================
+   Pagination
+   ============================================================================ */
+
+.pagination-item a {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #AEAEA1 !important;
+}
+
+.pagination-item a:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* ============================================================================
+   App Name/Logo
+   ============================================================================ */
+
+.app-name-link img {
+  width: 2rem;
+}
+
+.app-name {
+  color: #fff !important;
+}
+
+/* ============================================================================
+   Cover Page Styling
+   ============================================================================ */
 
 section.cover {
   background: linear-gradient(to bottom right, #0d0d0d 0%, #1a1a1a 50%, #0f0f0f 100%) !important;
@@ -40,6 +237,12 @@ section.cover .cover-main {
   max-width: 700px;
 }
 
+section.cover .cover-main > p:first-child img {
+  width: 250px !important;
+  max-width: 250px !important;
+}
+
+/* Cover page title */
 section.cover h1 {
   font-weight: 300;
   letter-spacing: 0.1em;
@@ -48,6 +251,7 @@ section.cover h1 {
   margin-bottom: 0.5rem;
 }
 
+/* Cover page tagline */
 section.cover blockquote {
   font-size: 1rem;
   color: #888;
@@ -56,15 +260,62 @@ section.cover blockquote {
   letter-spacing: 0.05em;
 }
 
+section.cover blockquote em {
+  color: #AEAEA1;
+  font-style: italic;
+}
+
+/* Cover page install command block */
 section.cover pre {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 4px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(174,174,161,0.3);
+  border-radius: 6px;
   text-align: left;
   max-width: 500px;
   margin: 1.5rem auto;
+  padding: 1rem 1.25rem;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
 }
 
+section.cover pre code {
+  white-space: pre-wrap;
+  word-break: break-word;
+  display: block;
+}
+
+section.cover pre:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(174,174,161,0.5);
+  box-shadow: 0 0 20px rgba(174,174,161,0.15);
+  transform: translateY(-1px);
+}
+
+section.cover pre::after {
+  content: "Click to copy";
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 0.7rem;
+  color: rgba(174,174,161,0.6);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+section.cover pre:hover::after {
+  opacity: 1;
+}
+
+section.cover pre.copied::after {
+  content: "Copied!";
+  color: var(--theme-color, #4a9eff);
+  opacity: 1;
+}
+
+/* Cover page feature list */
 section.cover ul {
   text-align: left;
   display: inline-block;
@@ -78,7 +329,11 @@ section.cover ul li {
   font-size: 0.9rem;
   padding: 0.4rem 0;
   border-bottom: 1px solid rgba(255,255,255,0.05);
-  font-family: var(--blackwell-font-mono);
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', monospace;
+}
+
+section.cover ul li strong {
+  color: #AEAEA1;
 }
 
 section.cover ul li:last-child {
@@ -87,51 +342,60 @@ section.cover ul li:last-child {
 
 section.cover ul li::before {
   content: "→ ";
-  color: #444;
+  color: #34495e;
   margin-right: 0.5rem;
+  font-weight: 900;
 }
 
-/* First button - transparent with white text */
-section.cover .cover-main > p:last-of-type a:first-child,
-section.cover .cover-main > p:last-child a:first-child {
-  border: 1px solid rgba(255,255,255,0.3) !important;
-  background: transparent !important;
-  color: #fff !important;
-  padding: 0.6rem 1.8rem;
+/* Cover page buttons */
+section.cover .cover-main > p:last-of-type a {
+  border: 1px solid rgba(255,255,255,0.2);
+  background: transparent;
+  color: #ccc;
+  padding: 0.7rem 2rem;
   font-size: 0.85rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: all 0.3s ease;
-  border-radius: 2px;
+  border-radius: 4px;
+  display: inline-block;
 }
 
-section.cover .cover-main > p:last-of-type a:first-child:hover,
-section.cover .cover-main > p:last-child a:first-child:hover {
-  border-color: rgba(255,255,255,0.5) !important;
-  background: rgba(255,255,255,0.05) !important;
+section.cover .cover-main > p:last-of-type a:hover {
+  border-color: rgba(74,158,255,0.5);
+  color: #e6f4ff;
+  background: linear-gradient(135deg, rgba(74,158,255,0.15) 0%, rgba(74,158,255,0.1) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74,158,255,0.2);
 }
 
-/* Second button - theme color background */
-section.cover .cover-main > p:last-of-type a:last-child,
-section.cover .cover-main > p:last-child a:last-child {
-  background: var(--theme-color, #4a9eff) !important;
-  border: 1px solid var(--theme-color, #4a9eff) !important;
+/* Primary button (Get Started) */
+section.cover .cover-main > p:last-of-type a:first-child {
+  background: linear-gradient(135deg, rgba(174,174,161,0.2) 0%, rgba(174,174,161,0.15) 100%);
+  border-color: rgba(174,174,161,0.5);
+  color: #AEAEA1;
+  font-weight: 600;
+}
+
+section.cover .cover-main > p:last-of-type a:first-child:hover {
+  background: linear-gradient(135deg, rgba(174,174,161,0.3) 0%, rgba(174,174,161,0.25) 100%);
+  border-color: rgba(174,174,161,0.7);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(174,174,161,0.2);
+}
+
+/* Secondary button (View on GitHub) - explicit rule */
+section.cover .cover-main > p:last-of-type a:last-child:hover {
+  border-color: rgba(74,158,255,0.5) !important;
   color: #fff !important;
-  padding: 0.6rem 1.8rem;
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  border-radius: 2px;
+  background: linear-gradient(135deg, rgba(74,158,255,0.15) 0%, rgba(74,158,255,0.1) 100%) !important;
+  box-shadow: 0 4px 12px rgba(74,158,255,0.2) !important;
 }
 
-section.cover .cover-main > p:last-of-type a:last-child:hover,
-section.cover .cover-main > p:last-child a:last-child:hover {
-  background: var(--theme-color-dark, #2d7dd2) !important;
-  border-color: var(--theme-color-dark, #2d7dd2) !important;
-}
+/* ============================================================================
+   Mobile Responsive
+   ============================================================================ */
 
-/* Mobile responsive */
 @media screen and (max-width: 768px) {
   section.cover {
     padding: 0 1rem;
@@ -144,6 +408,7 @@ section.cover .cover-main > p:last-child a:last-child:hover {
 
   section.cover .cover-main > p:first-child img {
     max-width: 100px !important;
+    width: 100px !important;
   }
 
   section.cover h1 {
@@ -202,114 +467,4 @@ section.cover .cover-main > p:last-child a:last-child:hover {
   section.cover ul li {
     font-size: 0.75rem;
   }
-}
-
-/* ==========================================================================
-   Sidebar Styles
-   ========================================================================== */
-
-.sidebar {
-  background-color: #fafafa;
-  border-right: 1px solid #eee;
-}
-
-.sidebar .app-name {
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.app-name-link img {
-  width: 2rem;
-}
-
-.sidebar ul li strong {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  color: #333;
-  margin-top: 1rem;
-  display: block;
-}
-
-.sidebar ul li a {
-  color: #555;
-  font-size: 0.9rem;
-  transition: color 0.2s ease;
-}
-
-.sidebar ul li a:hover {
-  color: var(--theme-color);
-}
-
-.sidebar ul li.active > a {
-  color: var(--theme-color);
-  font-weight: 600;
-}
-
-.sidebar ul li a img {
-  vertical-align: middle;
-  margin-right: 0.3rem;
-  opacity: 0.7;
-}
-
-/* ==========================================================================
-   Content Area Styles
-   ========================================================================== */
-
-.markdown-section {
-  max-width: 800px;
-}
-
-.markdown-section h1,
-.markdown-section h2,
-.markdown-section h3 {
-  font-weight: 600;
-  letter-spacing: -0.01em;
-}
-
-.markdown-section pre {
-  background-color: #1a1a1a;
-  border-radius: 6px;
-}
-
-.markdown-section pre > code {
-  color: #e6e6e6;
-}
-
-.markdown-section code {
-  background-color: #f0f0f0;
-  border-radius: 3px;
-  padding: 0.15rem 0.4rem;
-  font-size: 0.9em;
-  font-family: var(--blackwell-font-mono);
-}
-
-.markdown-section pre > code {
-  background-color: transparent;
-  padding: 0;
-  font-family: var(--blackwell-font-mono);
-}
-
-.markdown-section blockquote {
-  border-left: 4px solid var(--theme-color);
-  padding-left: 1rem;
-  color: #555;
-}
-
-.markdown-section table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.markdown-section table th {
-  background-color: #f5f5f5;
-  font-weight: 600;
-  text-align: left;
-}
-
-.markdown-section table th,
-.markdown-section table td {
-  border: 1px solid #ddd;
-  padding: 0.6rem 0.8rem;
 }
