@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="160" height="20">
-  <!-- Blackwell Systems™ - Copyright (c) 2025 Dayna Blackwell. All Rights Reserved. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="28">
+  <!-- Blackwell Systems™ - Copyright (c) 2026 Dayna Blackwell. All Rights Reserved. -->
   <linearGradient id="bg" x2="0" y2="100%">
     <stop offset="0" stop-color="#333"/>
     <stop offset="1" stop-color="#1a1a1a"/>
   </linearGradient>
-  <rect rx="3" width="160" height="20" fill="url(#bg)"/>
-  <rect rx="3" x="0" width="65" height="20" fill="#1a1a1a"/>
-  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,sans-serif" font-size="11">
-    <text x="33" y="14">Blackwell</text>
-    <text x="112" y="14">Systems™</text>
+  <rect rx="4" width="220" height="28" fill="url(#bg)"/>
+  <rect rx="4" x="0" width="90" height="28" fill="#1a1a1a"/>
+  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11" font-weight="700" text-transform="uppercase">
+    <text x="45" y="18" letter-spacing="0.5">BLACKWELL</text>
+    <text x="155" y="18" letter-spacing="0.5">SYSTEMS™</text>
   </g>
 </svg>
